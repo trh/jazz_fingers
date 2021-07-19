@@ -51,9 +51,10 @@ module JazzFingers
       Pry.prompt = prompt
       Pry.input = input if JazzFingers.coolline?
       Pry.config.should_load_plugins = false
-      Pry.commands.alias_command('c', 'continue')
-      Pry.commands.alias_command('s', 'step')
-      Pry.commands.alias_command('n', 'next')
+      #nobody needs this done for them by default, it just ruins single letter assignments.
+      #Pry.commands.alias_command('c', 'continue')
+      #Pry.commands.alias_command('s', 'step')
+      #Pry.commands.alias_command('n', 'next')
       Pry.editor = 'vi'
       Pry.config.ls.separator = "\n"
       Pry.config.ls.heading_color = :magenta
